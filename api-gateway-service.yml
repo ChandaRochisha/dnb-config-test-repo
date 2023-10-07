@@ -1,1 +1,28 @@
+spring:
+  application:
+    name: api-gateway-service
+  cloud:
+    gateway:
+      routes:
+        - id: ACCOUNT-SERVICE
+          uri: lb://ACCOUNT-SERVICE
+          predicates:
+            - Path= /account/**
+        
+server:
+  port: 9292
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8762/eureka/
+jwt:
+  secret: mySecretKey
+  expireMs: 7200000
+  refrEshexpireMs: 7200000
+ 
 
