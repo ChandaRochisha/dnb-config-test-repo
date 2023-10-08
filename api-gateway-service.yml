@@ -7,7 +7,7 @@ spring:
         - id: ACCOUNT-SERVICE
           uri: lb://ACCOUNT-SERVICE
           predicates:
-            - Path= /account/**
+            - Path= /api/account/**
         - id: AUTH-SERVICE
           uri: lb://AUTH-SERVICE
           predicates:
