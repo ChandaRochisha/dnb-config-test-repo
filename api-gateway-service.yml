@@ -13,7 +13,7 @@ spring:
           predicates:
             - Path= /api/auth/**
 server:
-  port: 9292
+  port: 9191
 management:
   endpoints:
     web:
